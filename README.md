@@ -12,6 +12,7 @@ The Python script `ova_deployer.py` deploys an OpenNMS virtual appliance to a VM
 ### Usage
 1. Either add `ovftool` to `$PATH` - or set environment variable `$OVF_TOOL_ENV`.
 2. Update the application configuration `.json` with any additional configuration, such as NTP server, static IPs, proxies, etc.
+   1. Any IP addresses defined in the application configuration must conform to [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 3. Run the script, providing the path to the OVA image, application configuration, vCenter datastore, vCenter network and VI locator.
 4. Enter the vCenter username and password when prompted.
 
