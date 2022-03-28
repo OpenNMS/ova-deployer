@@ -37,6 +37,7 @@ optional arguments:
   -v, --verbose         Enable verbose logging
   -t, --thin            Use thin disk provisioning instead of thick
   -i, --insecure        Disable SSL verification
+  -f, --folder          Deploy the VM in a specific folder within VCenter
 ```
 
 ### Examples

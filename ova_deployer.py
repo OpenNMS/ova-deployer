@@ -42,6 +42,7 @@ def __get_parser() -> argparse.ArgumentParser:
     parser.add_argument('-v', '--verbose', action='store_true', help="Enable verbose logging")
     parser.add_argument('-t', '--thin', action='store_true', help="Use thin disk provisioning instead of thick")
     parser.add_argument('-i', '--insecure', action='store_true', help="Disable SSL verification")
+    parser.add_argument('-f', '--folder', help="VCenter folder to create the VM in", type=str)
     return parser
 
 # Check the OVF tool is accessible, and returns the path to invoke it if it is.
@@ -84,6 +85,8 @@ def __generate_ovf_args(ovf_tool: str, appliance_config: dict, settings: dict):
     ovf_args.append("--allowExtraConfig")
     for key, value in appliance_config.items():
         ovf_args.append(f"--extraConfig:{key}={value}")
+    if settings['folder']:
+        ovf_args.append(f"--vmFolder={settings['folder']}")
     ovf_args.append("--powerOn")
 
     return ovf_args
