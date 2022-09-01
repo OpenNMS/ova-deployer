@@ -106,6 +106,7 @@ if __name__ == '__main__':
             'verbose': ARGS.verbose,
             'thin_disk': ARGS.thin,
             'insecure': ARGS.insecure,
+            'folder': ARGS.folder,
         }) + [ARGS.image, ARGS.locator],
         check=True
     )
