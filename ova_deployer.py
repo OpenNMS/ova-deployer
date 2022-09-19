@@ -11,6 +11,7 @@ PROPERTIES = {
     "httpProxy": "guestinfo.onms.proxy.http",
     "httpsProxy": "guestinfo.onms.proxy.https",
     "ntpServer": "guestinfo.onms.ntp.server",
+    "ntsServer": "guestinfo.onms.nts.server",
     "staticIpv4Addresses": "guestinfo.onms.network.ipv4",
     "staticIpv6Addresses": "guestinfo.onms.network.ipv6",
     "gatewayIpv4Address": "guestinfo.onms.network.gateway.ipv4",
